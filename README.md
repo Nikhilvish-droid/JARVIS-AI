@@ -29,11 +29,12 @@ pyttsx3
 
 pyaudio
 
-wikipedia
+time
 
-pywhatkit
+webbrowser
 
 pyjokes
+
 
 ## ▶️ Run Jarvis AI
 
