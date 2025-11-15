@@ -47,6 +47,5 @@ if __name__=="__main__":
             textsp(" my my name is JARVIS AI. ")
             
         
-        ans=input("enter y/n to activate JARVIS AI :" \
-        "")
+        ans=input("enter y/n to activate JARVIS AI :")
         
