@@ -48,4 +48,5 @@ if __name__=="__main__":
             
         
         ans=input("enter y/n to activate JARVIS AI :")
-        
+
+    textsp("0  thank you ")   
