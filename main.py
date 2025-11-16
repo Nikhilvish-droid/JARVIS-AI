@@ -17,7 +17,7 @@ def sptext():
             print(f"YOUR TEXT IS :{data.lower()}")
             return data.lower()
         except:
-            textsp("sorry i cant hear you")
+            textsp("sorry i didn't understand ask another question")
 
 #converting text into computer/jarvis ai voice.
 def textsp(data):
@@ -29,31 +29,42 @@ def textsp(data):
     engine.say(data)
     engine.runAndWait()
 
+
 if __name__=="__main__":
     ans="y"
-    while ans=="y":
+    while True:
         data1=sptext()
         if data1=="hello":
-            textsp("hello hello nikhil what can i help you.")
+            textsp("hello nikhil what can i help you.")
 
         elif "time" in str(data1):
             hour=time.strftime("%H")
             min=time.strftime("%M")
-            textsp(f"oo,{hour} hour and {min}minutes.")
+            textsp(f"it is going on ,{hour} hour and {min}minutes.")
 
         elif "name" in str(data1) :
-            textsp(" my my name is JARVIS AI. ")
+            textsp("my name is JARVIS AI. ")
             
         elif "old" in str(data1) :
             text="i am 25 years old."
             textsp(text)
-        
         elif "youtube" in str(data1) :
             webbrowser.open("https://www.youtube.com/")
 
         elif "github" in str(data1) :
             webbrowser.open("https://github.com/Nikhilvish-droid")
         
-        ans=input("enter y/n to activate JARVIS AI :")
+        elif "joke" in str(data1) :
+            joke=pyjokes.get_joke(language="en",category="all")
+            print(joke)
+            textsp(joke)     
 
-    textsp("0  thank you ")   
+        elif "exit" in str(data1) :
+            print("thank you ")
+            textsp("thank you see you again.")
+            break
+        
+        else:
+            print("sorry i can't help you ask another question.")
+        
+        time.sleep(2)
