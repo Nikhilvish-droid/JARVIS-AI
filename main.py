@@ -14,8 +14,8 @@ def sptext():
         try:
             print("recognising...")
             data=recogniser.recognize_google(audio)
-            print(f"YOUR TEXT IS :{data}")
-            return data
+            print(f"YOUR TEXT IS :{data.lower()}")
+            return data.lower()
         except:
             textsp("sorry i cant hear you")
 
@@ -39,12 +39,20 @@ if __name__=="__main__":
         elif "time" in str(data1):
             hour=time.strftime("%H")
             min=time.strftime("%M")
-            sec=time.strftime("%S")
-            textsp(f"oo,{hour} hour {min}minutes and {sec}seconds")
+            textsp(f"oo,{hour} hour and {min}minutes.")
 
         elif "name" in str(data1) :
             textsp(" my my name is JARVIS AI. ")
             
+        elif "old" in str(data1) :
+            text="i am 25 years old."
+            textsp(text)
+        
+        elif "youtube" in str(data1) :
+            webbrowser.open("https://www.youtube.com/")
+
+        elif "github" in str(data1) :
+            webbrowser.open("https://github.com/Nikhilvish-droid")
         
         ans=input("enter y/n to activate JARVIS AI :")
 
